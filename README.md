@@ -40,7 +40,11 @@ Los colores, fuentes y diseños pueden personalizarse según sea necesario.
 Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, sigue estos pasos:
 
 Crea un fork del repositorio.
+
 Crea una rama para tu nueva función: git checkout -b nueva-funcionalidad.
+
 Realiza tus cambios y realiza un commit: git commit -m 'Añadir nueva funcionalidad'.
+
 Envía los cambios a tu fork: git push origin nueva-funcionalidad.
+
 Abre un pull request para revisar y fusionar tus cambios.
