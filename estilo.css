@@ -1,121 +1,107 @@
-body{
-    background-color: rgb(0, 0, 0);
-    color: rgb(254, 253, 253);
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(254, 253, 253);
 }
 header {
-    position: fixed;
+  position: fixed;
+  align-items: center;
 }
 
-header a{
-    color: rgb(250, 248, 248);
-    text-decoration: none;
-    padding: 0% 20px;
-    font-weight: bold;
+header a {
+  color: rgb(250, 248, 248);
+  text-decoration: none;
+  padding: 0% 20px;
+  font-weight: bold;
 }
 
-header a:hover{
-    color: darkgoldenrod;
+header a:hover {
+  color: darkgoldenrod;
 }
 
-
-#hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
     url(https://91b6be3bd2294a24b7b5-da4c182123f5956a3d22aa43eb816232.ssl.cf1.rackcdn.com/contentItem-4335419-28779912-1kbfyndu9y8xd-or.jpg);
-    background-size: cover;
-    background-position: center center;
-    color: white;
+  background-size: cover;
+  background-position: center center;
+  color: white;
 }
 
-    #galeria{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        
-    }
-    
-    #galeria img:hover{
-        opacity: 0.5;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-
-
-#pide-online{
-    background-color: white;
-    justify-content: right;
-    height: 60vh;
+#pide-online {
+  background-color: white;
+  min-height: 1vh;
 }
 
-#pide-online{
-    color: black;
+#pide-online {
+  color: black;
 }
 
-#como-pedir h2{
-    font-size: 3.5em;
-
+h2 {
+  font-size: 1.5em;
+  height: 10vh;
+  margin: 2%;
+  display: flex;
+  justify-content: flex-start;
+  color: rgb(3, 3, 3);
 }
 
-#pide-online{
-    font-size: 1.5em;
+#pide-online {
+  font-size: 1.5em;
 }
 
-@media (max-width:750px) {
-    #pide-online{
-        flex-direction: column-reverse;
-    }
+@media (max-width: 750px) {
+  #pide-online {
+    flex-direction: column-reverse;
+  }
 }
 
-#pide-online div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 20px;
+#pide-online div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
 }
 
-button{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 0% 20px;
-    font-weight: bold;
-    border: none;
-    opacity: 0.8;
-    transition: 0.8s;
-    cursor: pointer;
+button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0% 20px;
+  font-weight: bold;
+  border: none;
+  opacity: 0.8;
+  transition: 0.8s;
+  cursor: pointer;
 }
 
-label{
-    color: white;
+label {
+  color: rgb(255, 0, 157);
 }
 
-button{
-    background-color: white;
-    color: deeppink;
-    font-size: 0.8em;
+button {
+  background-color: white;
+  color: deeppink;
+  font-size: 0.8em;
 }
 
-h2{
-    background-color: deeppink;
-    color: white;
-    
-    
+form {
+  height: 10vh;
+  margin: 5%;
+  display: flex;
+  justify-content: flex-end;
+  justify-items: center;
+  justify-content: right;
+  color: deeppink;
 }
 
-form{
-    justify-content: right;
-    color: deeppink;
-    
-}
-
-input{
-background-color: deeppink;
-color: white;
+input {
+  background-color: deeppink;
+  color: white;
 }
