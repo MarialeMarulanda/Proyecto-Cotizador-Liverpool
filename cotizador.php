@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background: url('https://www.scappino.com/media/magestore/storepickup/images/tag/l/i/liver_test.jpg') no-repeat center center fixed;
+            background: url('https://i.ytimg.com/vi/1pCZ2fNoJeE/maxresdefault.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
         }
@@ -27,7 +27,7 @@
             margin-bottom: 200px;
         }
 
-        /* Añadí estos estilos para que coincidan con los estilos previos */
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -55,11 +55,11 @@
 
 <body>
     <header>
-        <!-- Encabezado omitido para evitar duplicación de código -->
+       
     </header>
 
     <section>
-        <!-- Contenido del héroe omitido para evitar duplicación de código -->
+        
     </section>
 
     <section id="pide-online">
@@ -83,30 +83,30 @@
                     </thead>
                     <tbody>
                         <?php
-                        // Ruta del archivo CSV
+                        
                         $csvFile = 'productos_liverpool.csv';
 
-                        // Inicializar la variable $codigo_producto
+                        
                         $codigo_producto = "";
 
-                        // Verificar si se ha enviado un formulario
+                        
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            // Obtener el valor del input
+                            
                             $codigo_producto = $_POST["busquedacodigo"];
                         }
 
-                        // Abre el archivo CSV en modo lectura
+                        
                         $file = fopen($csvFile, 'r');
 
-                        // Verifica si se pudo abrir el archivo
+                        
                         if ($file !== false) {
-                            // Inicializar variables para la suma
+                            
                             $sumaCasillas = 0;
                             $sumaPrecios = 0;
 
-                            // Lee cada línea del archivo CSV
+                           
                             while (($data = fgetcsv($file, 1000, ',')) !== false) {
-                                // Verifica si coincide el código de producto
+                                
                                 if ($codigo_producto == $data[0] || strpos($data[1], $codigo_producto) !== false) {
                                     echo "<tr>
                                             <td>{$data[0]}</td>
@@ -116,15 +116,15 @@
                                             <td><input type='checkbox' name='casilla_{$data[0]}'></td>
                                         </tr>";
 
-                                    // Recorrer las casillas marcadas y sumar precios
+                                    
                                     if (isset($_POST['casilla_' . $data[0]]) && $_POST['casilla_' . $data[0]] == 'on') {
                                         $sumaCasillas++;
-                                        $sumaPrecios += floatval($data[2]); // Sumar el precio (convierte a número flotante)
+                                        $sumaPrecios += floatval($data[2]); 
                                     }
                                 }
                             }
 
-                            // Cierra el archivo CSV
+                            
                             fclose($file);
                         } else {
                             echo "Error al abrir el archivo CSV.";
@@ -133,16 +133,16 @@
                     </tbody>
                 </table>
 
-                <!-- Botón de calcular dentro del formulario principal -->
+                
                 <input type='hidden' name='sumaCasillas' value='<?php echo $sumaCasillas; ?>'>
                 <input type='hidden' name='sumaPrecios' value='<?php echo $sumaPrecios; ?>'>
                 <button type='submit'>Calcular</button>
             </form>
 
             <?php
-            // Verificar si se ha enviado el formulario
+           
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Mostrar resultados
+                
                 echo "<p>Articulos en Carrito: $sumaCasillas</p>";
                 echo "<p>Total: $sumaPrecios</p>";
             }
